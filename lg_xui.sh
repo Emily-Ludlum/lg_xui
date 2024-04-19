@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # 默认设置
-DEFAULT_DOMAIN="net.shengdian100.cn"
-DEFAULT_EMAIL="net@shengdian100.cn"
+DEFAULT_DOMAIN="test.vvps.link"
+DEFAULT_EMAIL="test@vvps.link"
 
 # 询问用户输入域名和邮箱地址
-read -p "请输入要申请 SSL 证书的域名（默认值：$DEFAULT_DOMAIN）: " DOMAIN
-read -p "请输入 SSL 证书的邮箱地址（默认值：$DEFAULT_EMAIL）: " EMAIL
+#read -p "请输入要申请 SSL 证书的域名（默认值：$DEFAULT_DOMAIN）: " DOMAIN
+#read -p "请输入 SSL 证书的邮箱地址（默认值：$DEFAULT_EMAIL）: " EMAIL
 
 # 如果用户未输入任何内容，则使用默认设置
-DOMAIN=${DOMAIN:-$DEFAULT_DOMAIN}
-EMAIL=${EMAIL:-$DEFAULT_EMAIL}
+#DOMAIN=${DOMAIN:-$DEFAULT_DOMAIN}
+#EMAIL=${EMAIL:-$DEFAULT_EMAIL}
 
 # 设置防火墙规则
 echo "设置防火墙规则..."
@@ -31,7 +31,7 @@ apt install -y wget curl socat cron
 # 安装 Warp
 echo "安装 Warp..."
 wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh <<EOF
-zh_CN
+2
 1
 1
 EOF
@@ -49,8 +49,9 @@ echo "申请 SSL 证书，并下载到服务器目录..."
 # 安装 X-UI
 echo "正在安装 X-UI..."
 wget -N --no-check-certificate https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh && bash install.sh <<EOF
-NAS
-lg999111
+y
+VIP
+My@123123
 8880
 EOF
 
