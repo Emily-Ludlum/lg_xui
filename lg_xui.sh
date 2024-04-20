@@ -1,24 +1,12 @@
 #!/bin/bash
 
 # 默认设置
-DEFAULT_DOMAIN="test.vvps.link"
-DEFAULT_EMAIL="test@vvps.link"
+DEFAULT_DOMAIN="net.shengdian100.cn"
+DEFAULT_EMAIL="net@shengdian100.cn"
 
 # 设置默认域名和邮箱地址
 DOMAIN="$DEFAULT_DOMAIN"
 EMAIL="$DEFAULT_EMAIL"
-
-# 如果用户输入了新的域名和邮箱地址，则更新设置
-read -t 0 -r -n 10000 -s -d $'\0' DOMAIN
-read -t 0 -r -n 10000 -s -d $'\0' EMAIL
-
-# 如果用户未输入任何内容，则使用默认设置
-DOMAIN="${DOMAIN:-$DEFAULT_DOMAIN}"
-EMAIL="${EMAIL:-$DEFAULT_EMAIL}"
-
-# 继续执行脚本
-echo "域名: $DOMAIN"
-echo "邮箱: $EMAIL"
 
 # 设置防火墙规则
 echo "设置防火墙规则..."
